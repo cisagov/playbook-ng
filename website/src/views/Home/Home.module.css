@@ -1,0 +1,85 @@
+.card_text {
+  font-size: 16px;
+}
+
+.card_button {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.playbook_open_alert {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  gap: 8px;
+
+  --bs-alert-bg: var(--uswds-yellow-5);
+  --bs-alert-color: var(--dhs-gray-90);
+  --bs-alert-link-color: var(--dhs-gray-90);
+  --bs-alert-border-color: var(--dhs-gray);
+}
+
+.choices_row {
+  padding: 32px;
+  border: 1px solid #707070;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: 3px 3px 3px #cccccc;
+
+  /* adjust padding (cleaner stacking) */
+  padding-top: 16px;
+  padding-bottom: 0px;
+}
+
+.choice_col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* adjust padding (cleaner stacking) */
+  padding-bottom: 24px;
+  margin-bottom: 8px;
+}
+
+/* border between cols when stacked */
+@media (max-width: 767px) {
+  .choice_col:not(:last-child) {
+    border-bottom: 2px solid #ccc;
+  }
+}
+
+.choice_icon {
+  font-size: 96px;
+  color: #1b1b1b;
+
+  margin-bottom: 32px;
+}
+
+.choice_label {
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 500;
+
+  margin-bottom: 32px;
+}
+
+.choice_description {
+  font-size: 16px;
+
+  padding: 0px 16px;
+  margin-bottom: 32px;
+
+  /* make buttons align in side-by-side view */
+  flex-grow: 1;
+}
+
+.choice_desc_em {
+  font-weight: 500;
+}
+
+.choice_button {
+  text-transform: uppercase;
+  font-weight: 600;
+}

@@ -1,0 +1,17 @@
+{
+    "datasets": {
+        "coun7er": [
+            "latest"
+        ]
+    },
+    "last_updated": "2025-03-29T00:33:28.200348",
+    "attack_enterprise": [
+        "16.1"
+    ],
+    "attack_mobile": [
+        "16.1"
+    ],
+    "attack_ics": [
+        "16.1"
+    ]
+}

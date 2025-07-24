@@ -1,0 +1,14 @@
+{
+  "extends": ["../tsconfig.json"],
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "plugins": [{
+      "name": "typescript-plugin-css-modules"
+    }]
+  }
+}

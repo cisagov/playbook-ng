@@ -1,0 +1,71 @@
+.root {
+  overflow-wrap: anywhere;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.root h1 {
+  margin: 4px 0px;
+}
+.root h2 {
+  margin: 4px 0px;
+}
+.root h3 {
+  margin: 4px 0px;
+}
+.root h4 {
+  margin: 4px 0px;
+}
+.root h5 {
+  margin: 4px 0px;
+}
+.root h6 {
+  margin: 4px 0px;
+}
+
+.root div:has(table) {
+  overflow-x: auto;
+  margin-bottom: 12px;
+  max-height: 400px;
+  overflow-y: auto;
+  border: 2px solid var(--dhs-gray);
+}
+
+.root table {
+  margin-bottom: 0;
+
+  --bs-table-color: var(--dhs-black);
+  --bs-table-bg: #00000000;
+
+  --bs-table-striped-color: var(--dhs-gray-90);
+  --bs-table-striped-bg: var(--dhs-light-blue-10);
+
+  --bs-table-active-color: var(--dhs-gray-90);
+  --bs-table-active-bg: var(--dhs-light-blue-15);
+
+  --bs-table-hover-color: var(--dhs-gray-90);
+  --bs-table-hover-bg: var(--dhs-light-blue-15);
+
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.root table th {
+  vertical-align: top;
+  background-color: var(--dhs-blue);
+  color: var(--dhs-white);
+
+  position: sticky;
+  top: 0;
+}
+
+.root div:has(table) {
+  overflow-x: auto;
+  max-height: 400px;
+  overflow-y: auto;
+  border: 2px solid var(--dhs-gray);
+}
+
+.root *:last-child {
+  margin-bottom: 0;
+}

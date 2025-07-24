@@ -1,0 +1,13 @@
+.header {
+  background-color: var(--dhs-light-blue-60);
+  color: var(--dhs-white);
+  padding: 6px 12px 4px 12px !important;
+}
+
+.body > *:last-child {
+  margin-bottom: 0;
+}
+
+.footer {
+  padding: 4px !important;
+}

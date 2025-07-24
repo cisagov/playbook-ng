@@ -1,0 +1,18 @@
+.root {
+  margin-bottom: 28px;
+}
+
+.title {
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 2px 4px;
+
+  --fg: rgb(0, 46, 139);
+  --bg: #ddfcff;
+
+  color: var(--fg);
+  border-color: var(--fg);
+  background-color: var(--bg);
+
+  font-size: 20px;
+}

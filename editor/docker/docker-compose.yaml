@@ -1,0 +1,7 @@
+services:
+  editor:
+    image: 'countermeasure-editor-nginx'
+    container_name: 'countermeasure-editor'
+    restart: always
+    ports:
+      - "8000:80"

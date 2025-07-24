@@ -1,0 +1,47 @@
+{
+
+  "dev": {
+    "load": {
+      "attack": {
+        "enterprise": true,
+        "mobile"    : true,
+        "ics"       : true
+      },
+      "dataset": {
+        "id"     : "coun7er",
+        "version": "latest"
+      }
+    },
+    "unload_warning": false,
+    "search_caching": true,
+    "export_marks": {
+      "contact_info": "Contact CISA Central at 1-844-Say-CISA or SayCISA@cisa.dhs.gov for questions about the tool. Visit the CISA Incident Reporting System (https://myservices.cisa.gov/irf) to securely report cyber incidents to CISA.",
+      "disclaimer": "COUN7ER, including its playbook, strategies, countermeasures, guidance, or any other content, is for general informational purposes only. Using or applying content from COUN7ER may inhibit device or system functions or cause system or device failure. Users assume all risks from the use of COUN7ER. In no event shall the United States Government be liable for any damages arising or associated with anyone’s use of or reliance on COUN7ER. All trademarks are the property of their respective owners, and CISA does not endorse, recommend, or favor any product, service, or vendor regardless of any specific reference."
+    },
+    "external_link_prompt": "You are now leaving an official website of the United State Government (USG), the Department of Homeland Security (DHS) and the Cybersecurity and Infrastructure Security Agency (CISA). You are leaving the .gov / .mil space. Links to non-USG, non-DHS and non-CISA sites are provided for the visitor's convenience and do not represent an endorsement by USG, DHS or CISA of any commercial or private issues, products or services. Note that the privacy policy of the linked site may differ from that of USG, DHS and CISA. [Right Click] -> [Open Link in New Tab] to ignore this message for future links.",
+    "export_logging": null
+  },
+
+  "prod": {
+    "load": {
+      "attack": {
+        "enterprise": true,
+        "mobile"    : false,
+        "ics"       : true
+      },
+      "dataset": {
+        "id"     : "coun7er",
+        "version": "latest"
+      }
+    },
+    "unload_warning": true,
+    "search_caching": true,
+    "export_marks": {
+      "contact_info": "Contact CISA Central at 1-844-Say-CISA or SayCISA@cisa.dhs.gov for questions about the tool. Visit the CISA Incident Reporting System (https://myservices.cisa.gov/irf) to securely report cyber incidents to CISA.",
+      "disclaimer": "COUN7ER, including its playbook, strategies, countermeasures, guidance, or any other content, is for general informational purposes only. Using or applying content from COUN7ER may inhibit device or system functions or cause system or device failure. Users assume all risks from the use of COUN7ER. In no event shall the United States Government be liable for any damages arising or associated with anyone’s use of or reliance on COUN7ER. All trademarks are the property of their respective owners, and CISA does not endorse, recommend, or favor any product, service, or vendor regardless of any specific reference."
+    },
+    "external_link_prompt": "You are now leaving an official website of the United State Government (USG), the Department of Homeland Security (DHS) and the Cybersecurity and Infrastructure Security Agency (CISA). You are leaving the .gov / .mil space. Links to non-USG, non-DHS and non-CISA sites are provided for the visitor's convenience and do not represent an endorsement by USG, DHS or CISA of any commercial or private issues, products or services. Note that the privacy policy of the linked site may differ from that of USG, DHS and CISA. [Right Click] -> [Open Link in New Tab] to ignore this message for future links.",
+    "export_logging": null
+  }
+
+}

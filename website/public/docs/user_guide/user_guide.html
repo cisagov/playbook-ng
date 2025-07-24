@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Playbook-NG User Guide</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Arial;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: blue;
+    }
+    a:visited {
+      color: blue;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Playbook-NG User Guide</h1>
+<p class="date">Updated March 25th, 2025</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#introduction">1. Introduction</a>
+<ul>
+<li><a href="#intended-audience">1.1 Intended Audience</a></li>
+<li><a href="#what-is-a-playbook">1.2 What is a Playbook?</a></li>
+<li><a href="#what-is-a-countermeasure">1.3 What is a
+Countermeasure?</a></li>
+<li><a href="#cisa-coun7er">1.4 CISA COUN7ER</a>
+<ul>
+<li><a href="#contact-cisa">1.4.1 Contact CISA</a></li>
+<li><a href="#coun7er-disclaimer">1.4.2 COUN7ER Disclaimer</a></li>
+</ul></li>
+<li><a href="#mitre-attck">1.5 MITRE ATT&amp;CK</a></li>
+</ul></li>
+<li><a href="#creating-a-playbook">2. Creating a Playbook</a>
+<ul>
+<li><a href="#starting-from-scratch">2.1 Starting from Scratch</a></li>
+<li><a href="#creating-a-playbook-based-on-a-template">2.2 Creating a
+Playbook Based on a Template</a>
+<ul>
+<li><a href="#selecting-a-template">2.2.1 Selecting a Template</a></li>
+</ul></li>
+<li><a href="#importing-an-existing-playbook">2.3 Importing an Existing
+Playbook</a>
+<ul>
+<li><a href="#import-playbook">2.3.1 Import Playbook</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#working-with-an-open-playbook">3. Working with an Open
+Playbook</a>
+<ul>
+<li><a href="#adding-attck-techniques-to-a-playbook">3.1 Adding
+ATT&amp;CK Techniques to a Playbook</a>
+<ul>
+<li><a href="#searching-for-techniques">3.1.1 Searching for
+Techniques</a></li>
+<li><a href="#technique-filters">3.1.2 Technique Filters</a>
+<ul>
+<li><a href="#filter-numbers">3.1.2.1 Filter Numbers</a>
+<ul>
+<li><a href="#how-filter-numbers-update">3.1.2.1.1 How Filter Numbers
+Update</a></li>
+</ul></li>
+<li><a href="#attck-domain-filter">3.1.2.2 ATT&amp;CK Domain
+Filter</a></li>
+<li><a href="#platforms-filter">3.1.2.3 Platforms Filter</a>
+<ul>
+<li><a href="#note-ics-techniques-and-platforms">3.1.2.3.1 Note: ICS
+Techniques and Platforms</a></li>
+</ul></li>
+<li><a href="#tactics-filter">3.1.2.4 Tactics Filter</a></li>
+<li><a href="#data-sources-filter">3.1.2.5 Data Sources Filter</a></li>
+</ul></li>
+<li><a href="#adding-techniques-with-the-technique-id-extractor">3.1.3
+Adding Techniques with the Technique ID Extractor</a></li>
+<li><a href="#cart-overview">3.1.4 Cart Overview</a>
+<ul>
+<li><a href="#baseline-countermeasures">3.1.4.1 Baseline
+Countermeasures</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#adding-countermeasures-to-a-playbook">3.2 Adding
+Countermeasures to a Playbook</a>
+<ul>
+<li><a href="#additional-countermeasures">3.2.1 Additional
+Countermeasures</a></li>
+</ul></li>
+<li><a href="#reviewing-added-techniques-and-countermeasures">3.3
+Reviewing Added Techniques and Countermeasures</a>
+<ul>
+<li><a href="#deleting-techniques">3.3.1 Deleting Techniques</a></li>
+<li><a href="#ignoring-countermeasures">3.3.2 Ignoring
+Countermeasures</a></li>
+<li><a href="#deleting-additional-countermeasures">3.3.3 Deleting
+Additional Countermeasures</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#exporting-and-closing-a-playbook">4. Exporting and Closing
+a Playbook</a>
+<ul>
+<li><a href="#exporting-a-playbook">4.1 Exporting a Playbook</a>
+<ul>
+<li><a href="#json">4.1.1 JSON</a></li>
+<li><a href="#markdown">4.1.2 Markdown</a></li>
+<li><a href="#word-document">4.1.3 Word Document</a></li>
+<li><a href="#excel-spreadsheet">4.1.4 Excel Spreadsheet</a></li>
+<li><a href="#playbook-template">4.1.5 Playbook Template</a></li>
+</ul></li>
+<li><a href="#clearing-a-playbook">4.2 Clearing a Playbook</a></li>
+</ul></li>
+</ul>
+</nav>
+<section id="introduction" class="level2">
+<h2>1. Introduction</h2>
+<p>Welcome to Playbook-NG! Playbook-NG is an application, developed by
+CISA Threat Hunting, that is designed to facilitate the creation of
+Countermeasure Playbooks through the usage of ATT&amp;CK-based
+cybersecurity findings.</p>
+<section id="intended-audience" class="level3">
+<h3>1.1 Intended Audience</h3>
+<p>The intended audience for Playbook-NG is cybersecurity professionals,
+such as defensive cyber operations (DCO) engineers, who have some
+familiarity with the MITRE ATT&amp;CK framework along with related
+concepts such as privilege escalation and persistence.</p>
+</section>
+<section id="what-is-a-playbook" class="level3">
+<h3>1.2 What is a Playbook?</h3>
+<p>A cybersecurity Playbook is a strategic document that outlines the
+strategies or steps involved in combating a particular threat. For
+example, Microsoft publishes its own set of <a
+href="https://learn.microsoft.com/en-us/security/operations/incident-response-playbooks">pre-built
+Playbooks for dealing with threats such as Phishing</a>. Playbook-NG
+allows users to create Playbooks that provide Countermeasures for one or
+more ATT&amp;CK Techniques.</p>
+</section>
+<section id="what-is-a-countermeasure" class="level3">
+<h3>1.3 What is a Countermeasure?</h3>
+<p>In the context of Playbook-NG, we define a Countermeasure as an
+action or procedure that reduces the vulnerability of an information
+system to a particular attack. Therefore, Countermeasures are intended
+to eliminate or mitigate the harm that can be caused by such
+attacks.</p>
+</section>
+<section id="cisa-coun7er" class="level3">
+<h3>1.4 CISA COUN7ER</h3>
+<p>The CISA COUN7ER project is focused on creating an open-source
+catalog of cybersecurity Countermeasures. Playbook-NG leverages the
+COUN7ER dataset as its primary source of Countermeasures and includes
+capabilities that allow for updating to the latest set of
+Countermeasures from COUN7ER’s GitHub repository.</p>
+<section id="contact-cisa" class="level4">
+<h4>1.4.1 Contact CISA</h4>
+<p>Contact CISA Central at 1-844-Say-CISA or SayCISA@cisa.dhs.gov for
+questions about the tool.<br />
+Visit the CISA Incident Reporting System (<a
+href="https://myservices.cisa.gov/irf"
+class="uri">https://myservices.cisa.gov/irf</a>) to securely report
+cyber incidents to CISA.</p>
+</section>
+<section id="coun7er-disclaimer" class="level4">
+<h4>1.4.2 COUN7ER Disclaimer</h4>
+<p>COUN7ER, including any associated information, playbook, strategies,
+countermeasures, apparatus, process, product, guidance or any other
+content, is provided “as is” and for general informational purposes
+only. Neither CISA nor the United States Government, nor any of their
+employees, make any warranty, express or implied, or assume any legal
+liability or responsibility for the accuracy, completeness, suitability,
+or efficacy of any output or content from COUN7ER. Users hereby
+acknowledge that using COUN7ER may require expert knowledge and advanced
+technical capabilities beyond what is typical for members of the public;
+and that the use or reliance upon the countermeasures, content, or any
+other information obtained from COUN7ER may cause adverse consequences,
+including potential device or system failure.</p>
+<p>Users assume all risks from the use of COUN7ER, and without limiting
+the foregoing, users are responsible for any actions they take on
+systems and devices. In no event shall the United States Government, its
+employees, or its contractors or subcontractors be liable for any
+damages including, but not limited to, direct, indirect, special or
+consequential damages, arising out of, resulting from, or in any way
+connected with COUN7ER or its use; whether or not based upon warranty,
+contract, tort, or otherwise; whether or not arising out of negligence;
+and whether or not injury was sustained from, or arose out of the
+results of, or reliance upon COUN7ER.</p>
+<p>References to any specific entity, commercial product, process, data
+format or service by trade name, trademark, manufacturer, or otherwise,
+do not constitute or imply an endorsement, recommendation, or favoring
+by CISA or the United States Government. All trademarks are the property
+of their respective owners. Users acknowledge that information within
+COUN7ER may not constitute the most up-to-date guidance or technical
+information and COUN7ER is not intended to, and does not constitute
+advice for compliance, regulatory, or legal purposes. Users should
+confer with their respective advisors and subject matter experts to
+obtain advice based on their individual circumstances.</p>
+</section>
+</section>
+<section id="mitre-attck" class="level3">
+<h3>1.5 MITRE ATT&amp;CK</h3>
+<p>The MITRE ATT&amp;CK Framework is a knowledge base of adversary
+Tactics and Techniques. ATT&amp;CK is used in Playbook-NG as a means of
+defining a standard set of adversarial Techniques (e.g., LSASS memory
+dumping) against which Countermeasure Playbooks can be built. Techniques
+may come from cyber threat intelligence (CTI) or other sources such as
+analyst knowledge. Resources for getting started with ATT&amp;CK can be
+found <a href="https://attack.mitre.org/resources/">here</a>.</p>
+</section>
+</section>
+<section id="creating-a-playbook" class="level2">
+<h2>2. Creating a Playbook</h2>
+<p>There are three ways to create a Playbook in Playbook-NG:</p>
+<ol type="1">
+<li>Start one from scratch</li>
+<li>Create one based on a Template</li>
+<li>Import an existing one</li>
+</ol>
+<section id="starting-from-scratch" class="level3">
+<h3>2.1 Starting from Scratch</h3>
+<p>To build a new Playbook from scratch, use the <strong>Start From
+Scratch</strong> button on the Playbook-NG homepage.</p>
+<p align="center">
+<img src="./images/1_playbook_ng_home.jpg" style="width:600px;border: 3px solid #555" alt="The PlaybookNG Home Page"><br/><b>Figure
+1: PlaybookNG Home Page</b>
+</p>
+<p align="center">
+<img src="./images/2_start_from_scratch.jpg" style="width:280px;border: 3px solid #555" alt="The Start a New Playbook Button (home page)"><br/><b>Figure
+2: Start From Scratch Button</b>
+</p>
+<p>The <strong>Start From Scratch</strong> button creates a new, empty
+Playbook and navigates to the Add ATT&amp;CK Techniques page, where the
+ATT&amp;CK Techniques for the Playbook are selected. Refer to Section
+3.1 for more information on adding ATT&amp;CK Techniques.</p>
+</section>
+<section id="creating-a-playbook-based-on-a-template" class="level3">
+<h3>2.2 Creating a Playbook Based on a Template</h3>
+<p>Besides starting from scratch, Playbook-NG also supports creating
+Playbooks based on Templates. Templates are pre-built Playbooks centered
+around providing Countermeasures against specific types of threats,
+ranging from malware types such as Ransomware to specific threat actors
+like Volt Typhoon. Therefore, Templates provide a set of ATT&amp;CK
+Techniques and corresponding Countermeasures that can be used on their
+own as a Playbook, or that can be updated with additional Techniques and
+Countermeasures.</p>
+<p>To create a Playbook based on a template, click on the <strong>Create
+From a Template</strong> button on the Playbook-NG home page (see
+<strong>Figure 3</strong>, below), which will navigate to the Templates
+page.</p>
+<p align="center">
+<img src="./images/3_create_from_template.jpg" style="width:280px;border: 3px solid #555" alt="The Create from Template Button (home page)"><br/><b>Figure
+3: Create Playbook from Template Button</b>
+</p>
+<section id="selecting-a-template" class="level4">
+<h4>2.2.1 Selecting a Template</h4>
+<p>The templates page provides a listing of the templates that are
+currently available in Playbook-NG.</p>
+<p align="center">
+<img src="./images/4_templates_home.jpg" style="width:600px;border: 3px solid #555" alt="The Templates page"><br/><b>Figure
+4: Templates Page (Example)</b>
+</p>
+<p>Clicking the <strong>More Info…</strong> button on a Template (see
+<strong>Figure 4</strong>, above) will open a pop-up with a long-form
+description covering the Template’s purpose and guidance on using it.
+(When exporting a Playbook created from a Template - this description is
+included at the start of Markdown / Microsoft Word outputs.)</p>
+<p>Clicking the <strong>Select Template</strong> button on a Template
+(see <strong>Figure 4</strong>, above) will start a new Playbook from
+that Template. This opens the Playbook Review Page, which allows for
+reviewing and deleting any unwanted Techniques or Countermeasures (see
+<em>Section 3.3: Reviewing Added Techniques and Countermeasures</em> for
+more information on the review process).</p>
+</section>
+</section>
+<section id="importing-an-existing-playbook" class="level3">
+<h3>2.3 Importing an Existing Playbook</h3>
+<p>Updating and making revisions to Playbooks is an important part of
+their lifecycle. Playbook-NG supports this process by allowing
+previously-created Playbooks to be imported for editing. To import an
+existing Playbook, click on the “<strong>Import Existing</strong>”
+button on the home page, which will bring up an “open file” dialog that
+allows for the selection of a previously exported Playbook-NG JSON
+file.</p>
+<p align="center">
+<img src="./images/5_import_existing.jpg" style="width:280px;border: 3px solid #555" alt="The Import Button (home page)"><br/><b>Figure
+5: Importing Existing Playbook Button</b>
+</p>
+<section id="import-playbook" class="level4">
+<h4>2.3.1 Import Playbook</h4>
+<p>After importing a Playbook-NG JSON file, users are presented with the
+Import Playbook page. This page (see <strong>Figure 6</strong>, below)
+updates, and then displays, the contents of the Playbook to be
+imported.</p>
+<p>The Playbook update process works as follows:</p>
+<ol type="1">
+<li>Unknown / deprecated Techniques are removed</li>
+<li>Revoked Techniques are replaced</li>
+<li>Unknown Countermeasures are removed</li>
+<li>Outdated Countermeasures are updated to their new versions present
+in the app</li>
+<li>New Countermeasure mappings for the Techniques are added (<em>if
+such Countermeasures were not ignored</em>)</li>
+</ol>
+<p>In the below example, there are no automatic updates to be made since
+each item (Technique or Countermeasure) is marked as “unchanged”.
+Therefore, the example Playbook will be imported as-is.</p>
+<p>To finish the import process, click on the “<strong>Import</strong>”
+button in the bottom left-hand corner of the page.</p>
+<p align="center">
+<img src="./images/6_import_review.jpg" style="width:600px;border: 3px solid #555" alt="The import Playbook review page"><br/><b>Figure
+6: Import Playbook Review Page</b>
+</p>
+<p>Should the “<strong>Cancel</strong>” button in the bottom-left corner
+be pressed, the page will revert to a view allowing selection of a
+different Playbook JSON file.</p>
+<p align="center">
+<img src="./images/7_import_playbook_page.jpg" style="width:280px;border: 3px solid #555" alt="The unloaded import Playbook page"><br/><b>Figure
+7: Import Playbook Page - Unloaded</b>
+</p>
+</section>
+</section>
+</section>
+<section id="working-with-an-open-playbook" class="level2">
+<h2>3. Working with an Open Playbook</h2>
+<section id="adding-attck-techniques-to-a-playbook" class="level3">
+<h3>3.1 Adding ATT&amp;CK Techniques to a Playbook</h3>
+<p>The Add Techniques page allows users to browse and add ATT&amp;CK
+techniques to their Playbook.</p>
+<p align="center">
+<img src="./images/8_add_techniques_overview.jpg" style="width:600px;border: 3px solid #555" alt="Add Techniques Page"><br/><b>Figure
+8: Add Techniques Page</b>
+</p>
+<p>Playbook-NG incorporates the full set of Techniques and
+Sub-Techniques from the latest ATT&amp;CK Enterprise release, any of
+which may be included in a Playbook. Future releases of Playbook-NG may
+include Techniques and Sub-techniques from other ATT&amp;CK domains (for
+example, Mobile or ICS) if Countermeasures mapped to these domains are
+available.</p>
+<p>To help minimize the size of the Add ATT&amp;CK Techniques page,
+Playbook-NG presents ATT&amp;CK Techniques as “cards” with just the
+first line of description text. To view the full details of a Technique,
+including the description, associated Tactics, and references, click on
+the <strong>More Info</strong> link below the description text (see
+<strong>Figure 8</strong>, above) on the card. This will bring up an
+info box that contains the full set of information.</p>
+<p align="center">
+<img src="./images/9_expanded_technique.jpg" style="width:600px;border: 3px solid #555" alt="An example expanded ATT&CK technique (Add Techniques page)"><br/><b>Figure
+9: Expanded Technique Info Box (example)</b>
+</p>
+<p>Both the Technique card and the Technique info box include a
+<strong>View on ATT&amp;CK</strong> link (see <strong>Figures 8 and
+9</strong>, above) in the top-right corner that navigates to the
+corresponding Technique page on the official ATT&amp;CK website.</p>
+<p>Adding a Technique to a Playbook is simple - use the <strong>+Add To
+Playbook</strong> button (see <strong>Figures 8 and 9</strong>, above).
+To add a Sub-Technique, add it directly using the same method, or select
+it inside of the parent Technique’s info box and then similarly use
+<strong>+Add To Playbook</strong> in the top right corner.</p>
+<p>Any Techniques or Sub-Techniques that are added will immediately show
+up in the <strong>Playbook Cart</strong> to the right of the Techniques
+List (see <strong>Figure 10</strong>, below). For more information on
+the cart and how to use it, refer to <em>Section 3.1.4: Cart
+Overview</em> below.</p>
+<p align="center">
+<img src="./images/10_playbook_cart.jpg" style="width:300px;border: 3px solid #555" alt="An example playbook cart (Techniques page)"><br/><b>Figure
+10: Playbook Cart (Example)</b>
+</p>
+<section id="searching-for-techniques" class="level4">
+<h4>3.1.1 Searching for Techniques</h4>
+<p>The primary way of finding Techniques to add to a Playbook is through
+the search bar (see <strong>Figure 11</strong>, below). The search bar
+allows searching by an ATT&amp;CK Technique’s ID/Name (if known), as
+well as any key words that may be associated with a Technique (e.g.,
+“UAC”). The returned search results will include any ATT&amp;CK
+Techniques, including Sub-Techniques, which matched the search
+query.</p>
+<p align="center">
+<img src="./images/11_technique_search.jpg" style="width:600px;border: 3px solid #555" alt="The technique search interface (Techniques page)"><br/><b>Figure
+11: Technique Search Interface (Example)</b>
+</p>
+<p align="center">
+<img src="./images/12_returned_subtechniques.jpg" style="width:600px;border: 3px solid #555" alt="Sub-Techniques returned when searching for a particular technique"><br/><b>Figure
+12: Returned ATT&amp;CK Sub-techniques for T1003 (Example)</b>
+</p>
+</section>
+<section id="technique-filters" class="level4">
+<h4>3.1.2 Technique Filters</h4>
+<p>Technique filters allow for refining the set of presented Techniques
+to a smaller, more manageable set.</p>
+<p>To use the filters, expose the filtering drop-down menu by clicking
+on <strong>Show Filters &gt;</strong> (directly below the text search
+bar). Once exposed, the drop-down menu will reveal 4 types of
+filters:</p>
+<ul>
+<li>Domain</li>
+<li>Platform</li>
+<li>Tactic</li>
+<li>Data Source</li>
+</ul>
+<p align="center">
+<img src="./images/13_shown_filters.jpg" style="width:600px;border: 3px solid #555" alt="Technique Filters"><br/><b>Figure
+13: Technique Filters</b>
+</p>
+<p>Filters operate in the following manner with respect to returned
+results:</p>
+<ol type="1">
+<li>Checking multiple options within a single filter (e.g., Platforms)
+is a union operation which returns more results.</li>
+<li>Using multiple filters (e.g., Platforms and Data Sources) is an
+intersection operation on their combined matches and returns less
+results.</li>
+</ol>
+<p>Individual filters may be cleared-out by manually unchecking filter
+selections. To clear all filter selections, click on the <strong>Clear
+All Filters</strong> button above the filters. To close any of the
+individual filter selections (e.g., Platforms), simply click outside of
+the filter.</p>
+<section id="filter-numbers" class="level5">
+<h5>3.1.2.1 Filter Numbers</h5>
+<p>The top of each filter includes numbers next to its name, which
+indicate:</p>
+<ol type="1">
+<li><strong>In the filter name dropdown buttons</strong>: The number of
+filter options checked / The number of filter options available</li>
+<li><strong>Next to each filter option</strong>: The number of results
+matching this filter option</li>
+</ol>
+<section id="how-filter-numbers-update" class="level6">
+<h6>3.1.2.1.1 How Filter Numbers Update</h6>
+<p>Checked filter options are cleared whenever the search text changes.
+Filter options that match no search results are removed.</p>
+<p>The checking/unchecking of options within a filter column will cause
+the other filter columns to update. Multiple filters represent an
+intersection and therefore filter each other.</p>
+<p><strong>For Example:</strong> Checking only the “Mobile” Domain
+filter option will limit available Platform options to “Android” and
+“iOS”.</p>
+</section>
+</section>
+<section id="attck-domain-filter" class="level5">
+<h5>3.1.2.2 ATT&amp;CK Domain Filter</h5>
+<p>The ATT&amp;CK Domain Filter is not pictured and is the simplest of
+the filters available. It allows selecting which ATT&amp;CK Domains (of
+those loaded into the application) that Techniques should be shown
+for.</p>
+</section>
+<section id="platforms-filter" class="level5">
+<h5>3.1.2.3 Platforms Filter</h5>
+<p>The Platforms Filter (see <strong>Figure 14</strong>, below) exposes
+the set of hardware/software platforms that ATT&amp;CK Techniques may be
+mapped to. Therefore, users can filter by the set of platforms that are
+utilized within their environment (e.g., Windows only, Windows and
+MacOS, etc.) to ensure that the returned list of ATT&amp;CK Techniques
+is relevant.</p>
+<p align="center">
+<img src="./images/14_platforms_filter.jpg" style="width:200px;border: 3px solid #555" alt="The platforms filter (Techniques page)"><br/><b>Figure
+14: Platforms Filter (Example)</b>
+</p>
+<section id="note-ics-techniques-and-platforms" class="level6">
+<h6>3.1.2.3.1 Note: ICS Techniques and Platforms</h6>
+<p>ICS Techniques do not <em>(directly)</em> have associated
+platforms.</p>
+<p>Instead, they have Assets that they target, and those Assets in turn
+have platforms. For representing ICS Techniques in Playbook-NG, their
+platforms inside of the filter are represented as both the names of the
+Assets that they target and the names of the platforms that are mapped
+to those Assets. This allows easy filtering on the names of Assets and
+platforms associated with ICS Techniques.</p>
+<p><a href="https://attack.mitre.org/assets/">More information on
+ATT&amp;CK Assets</a></p>
+</section>
+</section>
+<section id="tactics-filter" class="level5">
+<h5>3.1.2.4 Tactics Filter</h5>
+<p>The Tactics filter (see <strong>Figure 15</strong>, below) displays
+the set of ATT&amp;CK Tactics that Techniques are mapped to. In
+ATT&amp;CK, Tactics represent the “why” of an ATT&amp;CK Technique or
+Sub-Technique and the adversary’s tactical goal (the reason for
+performing an action). Some Techniques can be used to achieve multiple
+goals, and therefore are mapped to multiple Tactics.</p>
+<p>Users can make use of the Tactics filter to select the set of Tactics
+that are relevant to their Playbook. For example, if one is trying to
+select Countermeasures only for Techniques that are trying to achieve
+Persistence, the “Persistence” value in the Tactics filter can be
+selected.</p>
+<p align="center">
+<img src="./images/15_tactics_filter.jpg" style="width:200px;border: 3px solid #555" alt="The tactics filter (Techniques page)"><br/><b>Figure
+15: Tactics Filter (Example)</b>
+</p>
+<p><a href="https://attack.mitre.org/tactics/enterprise/">More
+information on ATT&amp;CK Tactics</a>.</p>
+</section>
+<section id="data-sources-filter" class="level5">
+<h5>3.1.2.5 Data Sources Filter</h5>
+<p>The Data Sources filter (see <strong>Figure 16</strong>, below)
+displays the set of ATT&amp;CK data sources that Techniques are mapped
+to. In ATT&amp;CK, data sources refer to the types of data that may be
+collected on a host or network to potentially detect an ATT&amp;CK
+Technique or Sub-Technique. Therefore, data sources are most relevant to
+threat hunting and analytics.</p>
+<p>For example, the “Process Creation” data source can be used to detect
+T1569.002 System Services: Service Execution, by providing the data
+around newly executed processes that call out to the Windows service
+control manager. Therefore, users can filter Techniques by data sources
+that may be available in their environment (e.g., those that are
+collected by a tool) or are otherwise appropriate for their particular
+use.</p>
+<p><a href="https://attack.mitre.org/datasources">More information on
+ATT&amp;CK Data Sources</a>.</p>
+<p align="center">
+<img src="./images/16_data_sources_filter.jpg" style="width:200px;border: 3px solid #555" alt="The data sources filter (Techniques page)"><br/><b>Figure
+16: Data Sources Filter (Example)</b>
+</p>
+</section>
+</section>
+<section id="adding-techniques-with-the-technique-id-extractor"
+class="level4">
+<h4>3.1.3 Adding Techniques with the Technique ID Extractor</h4>
+<p>Playbook-NG supports adding Techniques extracted from free text
+through the Technique ID Extractor tool. The Technique ID Extractor tool
+is found near the top of the Add Techniques page, under “Add Techniques
+from Text” and can be opened by clicking on the “<strong>&gt;</strong>”
+to the right of its name.</p>
+<p>Once opened (see <strong>Figure 17</strong>, below), the tool
+presents a text box (under “Paste Text Here”), where any free-form text
+can be entered and any ATT&amp;CK Technique or Sub-Technique IDs present
+in the text will be extracted for possible inclusion in the Playbook.
+Extraction of IDs happens automatically once text is entered into the
+text box.</p>
+<p align="center">
+<img src="./images/17_tech_id_extractor.jpg" style="width:600px;border: 3px solid #555" alt="ATT&CK Technique ID Extractor"><br/><b>Figure
+17: ATT&amp;CK Technique ID Extractor (with sample text)</b>
+</p>
+<p>Once the available Techniques or Sub-technique IDs have been
+extracted, the last step in using the Technique ID Extractor is
+selecting the extracted Techniques to add to the Playbook (see
+<strong>Figure 18</strong>, below). To add one or more extracted
+Techniques, simply click on the check box to the left of the Technique
+to select it, and then click on the “<strong>Add Selected</strong>”
+button in the bottom right-hand corner.</p>
+<p>Similarly, all of the extracted Techniques can be selected using the
+“<strong>Select All</strong>” button, and deselected with the
+“<strong>Select None</strong>” button, both of which are found under the
+list of extracted Techniques (see <strong>Figure 18</strong>, below). As
+with manually added Techniques, any extracted Techniques that are added
+will show up in the Playbook Cart, and those that have already been
+added (and are in the cart) will be listed as such in the Technique ID
+Extractor (see <strong>Figure 19</strong>, below).</p>
+<p align="center">
+<img src="./images/18_tech_id_extractor_selection.jpg" style="width:300px;border: 3px solid #555" alt="Technique Selection in ID Extractor"><br/><b>Figure
+18: Selecting Techniques in the ID Extractor</b>
+</p>
+<p align="center">
+<img src="./images/19_tech_id_extractor_existing_techniques.jpg" style="width:280px;border: 3px solid #555" alt="Already added techniques in the Technique ID Extractor"><br/><b>Figure
+19: Previously Added Techniques in the Technique ID Extractor</b>
+</p>
+</section>
+<section id="cart-overview" class="level4">
+<h4>3.1.4 Cart Overview</h4>
+<p>The Playbook-NG cart functions much like a traditional e-commerce
+shopping cart and provides a summary of the selected Playbook Techniques
+and Countermeasures.</p>
+<p>There are two ways to interact with cart items - clicking on the
+information icon (“<strong>i</strong>”) will bring up an info box that
+contains the full details of a particular Technique or Countermeasure;
+the same can be achieved by clicking on <strong>More Info..</strong>
+when viewing a Technique or Countermeasure. Similarly, clicking on the
+trashcan icon (🗑️) will delete an item from the cart.</p>
+<p align="center">
+<img src="./images/20_playbook_cart_overview.jpg" style="height:350px;border: 3px solid #555" alt="The Playbook-NG cart"><br/><b>Figure
+20: Cart Overview</b>
+</p>
+<section id="baseline-countermeasures" class="level5">
+<h5>3.1.4.1 Baseline Countermeasures</h5>
+<p>By default, Playbook-NG includes several “baseline” Countermeasures
+in each custom Playbook in the Additional Countermeasure section of the
+cart (see <strong>Figure 21</strong>, below). Baseline Countermeasures
+are those that are deemed to be useful in many scenarios; however, they
+can be manually deleted by clicking on the trashcan icon (🗑️) next to
+each item.</p>
+<p align="center">
+<img src="./images/21_additional_cms.jpg" style="height:200px;border: 3px solid #555" alt="Additional Baseline Countermeasures"><br/><b>Figure
+21: Additional Baseline Countermeasures</b>
+</p>
+</section>
+</section>
+</section>
+<section id="adding-countermeasures-to-a-playbook" class="level3">
+<h3>3.2 Adding Countermeasures to a Playbook</h3>
+<p>The process of adding Countermeasures in Playbook-NG is largely
+automated, since the Countermeasures that are applicable for a
+particular ATT&amp;CK Technique are automatically added once that
+Technique has been added to a Playbook. For example, the following
+Countermeasures are automatically added for <strong>T1003: OS Credential
+Dumping</strong>.</p>
+<p align="center">
+<img src="./images/22_t1003_cms.jpg" style="height:400px;border: 3px solid #555" alt="Countermeasures added for T1003"><br/><b>Figure
+22: Countermeasures Added for T1003</b>
+</p>
+<section id="additional-countermeasures" class="level4">
+<h4>3.2.1 Additional Countermeasures</h4>
+<p>Playbook-NG also supports the manual addition of Countermeasures,
+outside of those mapped to ATT&amp;CK Techniques. The Additional
+Countermeasures page which supports the manual addition of
+Countermeasures can be accessed by clicking on the <strong>&gt;
+Countermeasures</strong> button on the top right corner of the cart
+while on the Techniques page. Besides adding individual Countermeasures,
+the Countermeasures page also allows users to explore the set of
+Countermeasures that are available in Playbook-NG.</p>
+<p align="center">
+<img src="./images/23_additional_cms_page.jpg" style="width:600px;border: 3px solid #555" alt="Add additional countermeasures page"><br/><b>Figure
+23: Add Additional Countermeasures Page</b>
+</p>
+<p>The interface for the Countermeasures page is very similar to that
+used for the Techniques page - the one difference is that there are no
+individual filters for Countermeasures, with the free-text search bar
+being the only search interface. Therefore, any free-form text can be
+used to find any additional Countermeasures. Any matching text for the
+free-text search is displayed in the <strong>Matches:</strong> section
+found at the bottom of each Countermeasure (see <strong>Figure
+24</strong>, below).</p>
+<p align="center">
+<img src="./images/24_cm_search_results.jpg" style="width:600px;border: 3px solid #555" alt="Countermeasure search with results"><br/><b>Figure
+24: Countermeasure Search with Results (Example)</b>
+</p>
+<p>To view the full text of a Countermeasure, click on the <strong>More
+Info…</strong> button in the bottom left corner of each displayed
+Countermeasure, which will bring up an info box with the information.
+Once in the cart, clicking on the <strong>i</strong> icon next to each
+respective Countermeasure will bring up the same info box.</p>
+<p>After adding any additional Countermeasures, the remaining steps in
+building a Playbook with Playbook-NG are reviewing and exporting.</p>
+</section>
+</section>
+<section id="reviewing-added-techniques-and-countermeasures"
+class="level3">
+<h3>3.3 Reviewing Added Techniques and Countermeasures</h3>
+<p>The Playbook Review Page provides an overview of the Techniques and
+Countermeasures that have been added to the Playbook.</p>
+<p align="center">
+<img src="./images/25_review_page.jpg" style="width:600px;border: 3px solid #555" alt="The playbook review page"><br/><b>Figure
+25: Example Review Page</b>
+</p>
+<p>Users can browse the contents of the Playbook using the left-hand
+navigation menu, which provides a summary of the Countermeasures and
+Techniques in the Playbook. Countermeasures can be expanded by clicking
+on the right-hand arrow <strong>&gt;</strong> to see the list of
+Techniques that they apply to (see <strong>Figure 26</strong>,
+below).</p>
+<p align="center">
+<img src="./images/26_review_cms_expanded.jpg" style="width:350px;border: 3px solid #555" alt="Expanded countermeasures on the review page"><br/><b>Figure
+26: Review Page - Navigation Menu (Expanded Countermeasures)</b>
+</p>
+<p>COUN7ER Countermeasures including mappings to the Techniques that
+they mitigate. As such, Playbook entries can be viewed in two different
+ways on the review page:</p>
+<ul>
+<li><strong>Group by Countermeasures</strong> <em>(default)</em>:
+mitigated Techniques appear under each Countermeasure. Techniques can be
+displayed multiple times in this view - once per each Countermeasure
+that is mapped to the Technique.</li>
+<li><strong>Group by Techniques</strong>: corresponding Countermeasures
+appear under each Technique. Countermeasures can be displayed multiple
+times in this view - once per each Technique that is mapped to the
+Countermeasure.</li>
+</ul>
+<p>To switch between views, use the <strong>Group by Techniques</strong>
+toggle (see <strong>Figure 27</strong>, below) which is found above the
+listing of Countermeasures and Techniques.</p>
+<p align="center">
+<img src="./images/27_review_grouping_toggle.jpg" style="width:200px;border: 3px solid #555" alt="Review Page group by Techniques or Countermeasures toggle"><br/><b>Figure
+27: Review Page - Grouping Toggle</b>
+</p>
+<p>Figure 28, below, shows an example of how the two views look with the
+same Playbook content (grouped by Countermeasures at the top, and by
+Techniques at the bottom):</p>
+<p align="center">
+<img src="./images/28_review_group_comparison.jpg" style="width:600px;border: 3px solid #555" alt="Review page grouping comparison"><br/><b>Figure
+28: Review Page - Grouping Comparison</b>
+</p>
+<p>In addition, the review page includes a search bar that allows
+searching through entries by keywords such as Countermeasure name or
+Technique ID. Similarly, there is a platform filter (<strong>Figure
+29</strong>, below) which allows for filtering by Windows, macOS, and
+Linux so that only the Countermeasures applicable to the selected
+operating system(s) are displayed.</p>
+<p align="center">
+<img src="./images/29_review_platforms_filter.jpg" style="width:200px;border: 3px solid #555" alt="Platforms Filter"><br/><b>Figure
+29: Review Page - Platforms Filter</b>
+</p>
+<section id="deleting-techniques" class="level4">
+<h4>3.3.1 Deleting Techniques</h4>
+<p>In the <strong>Group by Techniques</strong> view, Techniques can be
+deleted from the Playbook (see <strong>Figure 30</strong>, below).
+Deleting a Technique removes it and its mapped Countermeasures from the
+Playbook.</p>
+<p align="center">
+<img src="./images/30_review_delete_techniques.jpg" style="width:600px;border: 3px solid #555" alt="Review Page Delete Techniques"><br/><b>Figure
+30: Review Page - Delete Techniques</b>
+</p>
+</section>
+<section id="ignoring-countermeasures" class="level4">
+<h4>3.3.2 Ignoring Countermeasures</h4>
+<p>In the default <em>Group by Countermeasures</em> view,
+Countermeasures can be ignored by using the <strong>Ignore</strong>
+button (see <strong>Figure 25</strong>, above). Ignoring a
+Countermeasure will remove it from every Technique it is mapped under,
+remove it from Additional Countermeasures, and prevent it from being
+added as a mapping when adding new Techniques. This also prevents it
+being added during updates to an imported Playbook. Ignoring certain
+Countermeasures can be useful to ensure that the ones included in a
+Playbook are applicable to your environment.</p>
+<p>The <strong>Ignored Countermeasure(s)</strong> button at the top of
+the review page (<strong>Figure 31</strong>, below) can be used to view
+and revert previously-ignored Countermeasures.</p>
+<p align="center">
+<img src="./images/31_review_ignore_countermeasures.jpg" style="width:600px;border: 3px solid #555" alt="Review Page Ignore Countermeasures"><br/><b>Figure
+31: Review Page - Ignore Countermeasures</b>
+</p>
+</section>
+<section id="deleting-additional-countermeasures" class="level4">
+<h4>3.3.3 Deleting Additional Countermeasures</h4>
+<p>In the <strong>Group by Techniques</strong> view, Additional
+Countermeasures can be deleted from the Playbook (see <strong>Figure
+32</strong>, below). This only affects the Additional Countermeasures
+section itself, as Techniques will keep their mapped
+Countermeasures.</p>
+<p align="center">
+<img src="./images/32_review_deleting_additional_cms.jpg" style="width:600px;border: 3px solid #555" alt="Review Page Delete Additional Countermeasures"><br/><b>Figure
+32: Review Page - Delete Additional Countermeasures</b>
+</p>
+</section>
+</section>
+</section>
+<section id="exporting-and-closing-a-playbook" class="level2">
+<h2>4. Exporting and Closing a Playbook</h2>
+<section id="exporting-a-playbook" class="level3">
+<h3>4.1 Exporting a Playbook</h3>
+<p>Once the review of a Playbook is complete, the final step is to
+export it in the desired format. Before exporting, it is recommended
+that the Playbook title is changed from its default value of
+<strong>Untitled</strong> (see <strong>Figure 33</strong>, below).
+Changing the Playbook title will make the exported Playbook files easier
+to identify, as the title is always included in the exported filenames.
+To edit the Playbook title, click on the “<strong>edit</strong>” icon (a
+pencil and paper) immediately to the right of the current title
+(“Untitled” by default).</p>
+<p align="center">
+<img src="./images/33_export_playbook_title.jpg" style="width:300px;border: 3px solid #555" alt="Editing playbook title"><br/><b>Figure
+33: Editing the Playbook Title</b>
+</p>
+<p>To see the available export options, click on the “<strong>Export
+Playbook</strong>” button at the top right of the page (<strong>Figure
+25</strong>, above), which will present an info box with five buttons on
+the left-hand column: <strong>JSON</strong>, <strong>Markdown</strong>,
+<strong>Word Document</strong>, <strong>Excel Spreadsheet</strong>, and
+<strong>Playbook Template</strong>.</p>
+<p align="center">
+<img src="./images/34_export_playbook_modal.jpg" style="width:600px;border: 3px solid #555" alt="The export Playbook info box"><br/><b>Figure
+34: Export Playbook Info Box</b>
+</p>
+<p>With the exception of templates, exported Playbook-NG files use the
+following syntax for their filename:
+<code>playbook_&lt;title&gt;_&lt;version&gt;.&lt;extension&gt;</code></p>
+<p>Where <code>&lt;title&gt;</code> is the title given to the Playbook,
+<code>&lt;version&gt;</code> is the version of the Playbook (e.g.,
+<code>v1</code>), and <code>&lt;extension&gt;</code> is the appropriate
+file extension depending on the type of file being exported (e.g.,
+<code>docx</code> for Word documents).</p>
+<section id="json" class="level4">
+<h4>4.1.1 JSON</h4>
+<p>The <strong>JSON</strong> button will export a machine-readable,
+JSON-formatted copy of the Playbook. The JSON version is intended to be
+saved for later editing and updating within Playbook-NG (see <em>Section
+2.3: Importing an Existing Playbook</em>). It is recommended that users
+export the JSON copy of a Playbook if there is any possibility of them
+returning to edit or update their Playbook.</p>
+<p align="center">
+<img src="./images/35_export_json.jpg" style="width:300px;border: 3px solid #555" alt="Export JSON button"><br/><b>Figure
+35: Export JSON</b>
+</p>
+</section>
+<section id="markdown" class="level4">
+<h4>4.1.2 Markdown</h4>
+<p>The <strong>Markdown</strong> button will export a human-readable,
+Markdown-formatted copy of the Playbook. The Markdown version contains
+all of the contents of the Playbook, including ATT&amp;CK Techniques and
+Countermeasures.</p>
+<p align="center">
+<img src="./images/36_markdown_export.jpg" style="width:300px;border: 3px solid #555" alt="Export Markdown button"><br/><b>Figure
+36: Export Markdown</b>
+</p>
+</section>
+<section id="word-document" class="level4">
+<h4>4.1.3 Word Document</h4>
+<p>The <strong>Word Document</strong> will export a human-readable,
+Microsoft Word (DOCX) formatted copy of the Playbook. The Word document
+version contains all of the contents of the Playbook, including
+ATT&amp;CK Techniques and Countermeasures.</p>
+<p align="center">
+<img src="./images/37_word_export.jpg" style="width:300px;border: 3px solid #555" alt="Export Word button"><br/><b>Figure
+37: Word Document Export</b>
+</p>
+</section>
+<section id="excel-spreadsheet" class="level4">
+<h4>4.1.4 Excel Spreadsheet</h4>
+<p>The <strong>Excel Spreadsheet</strong> button will export a
+human-readable, Microsoft Excel (XLSX) formatted copy of the Playbook.
+The Excel spreadsheet version contains a minimal set of the Playbook
+contents, including the ATT&amp;CK Techniques and mapped
+Countermeasures, but without the full contents of the Countermeasures
+(just their IDs and Names).</p>
+<p align="center">
+<img src="./images/38_excel_export.jpg" style="width:300px;border: 3px solid #555" alt="Export Excel button"><br/><b>Figure
+38: Excel Spreadsheet Export</b>
+</p>
+</section>
+<section id="playbook-template" class="level4">
+<h4>4.1.5 Playbook Template</h4>
+<p>The <strong>Playbook Template</strong> button will create and export
+a new JSON Template based on the contents (Techniques and
+Countermeasures) of the Playbook. The Playbook Template capability is
+intended to allow content managers to export new Playbook-NG Templates
+for further use. Unlike other export options, the Playbook Template
+export includes several optional settings as shown in <strong>Figure
+39</strong> below:</p>
+<ul>
+<li><strong>ID</strong>: the identifier to use for the Template.
+Defaults to “TMPL000x”.</li>
+<li><strong>Name</strong>: the name to use for the Template. Defaults to
+the name used for the Playbook.</li>
+<li><strong>Featured</strong>: whether the Template should be displayed
+in the <em>Featured Templates</em> section in Playbook-NG (which is used
+for high-visibility / ongoing incidents).</li>
+<li><strong>Add Icon</strong>: whether to include an icon for the
+Template. If toggled, an icon can be included as a Base64 encoded
+string.</li>
+<li><strong>Add Link</strong>: whether to add a hyperlink for the
+Template. If toggled, the name of the link and its URL can be
+specified.</li>
+<li><strong>Description</strong> <em>(Markdown)</em>: a description of
+threats the Template is intended to counter, along with usage
+guidance.</li>
+</ul>
+<p>In addition, there is a Template Preview at the bottom of the
+Playbook Template export section. This shows how the Template will look
+when rendered on the Playbook-NG Templates page.</p>
+<p>To export the Template, click on the “Export Template” button at the
+bottom of this section, which will save the template using the specified
+ID as the filename (e.g., <code>TMPL0006.json</code>).</p>
+<p align="center">
+<img src="./images/39_template_export.jpg" style="width:300px;border: 3px solid #555" alt="Export Template Info Box"><br/><b>Figure
+39: Template Export</b>
+</p>
+</section>
+</section>
+<section id="clearing-a-playbook" class="level3">
+<h3>4.2 Clearing a Playbook</h3>
+<p>Starting over on the creation of a Playbook or importing a different
+Playbook requires clearing the currently open Playbook. To do so, on the
+review page, click on the “<strong>Clear Playbook</strong>” button under
+the Created and Updated timestamps (see <strong>Figure 40</strong>,
+below).</p>
+<p align="center">
+<img src="./images/40_review_clear_playbook.jpg" style="width:400px;border: 3px solid #555" alt="The Playbook review page with the clear Playbook button (review page)"><br/><b>Figure
+40: Review Page with Clear Playbook (Example)</b>
+</p>
+<p>Clearing a Playbook without first exporting it to JSON will
+irreversibly destroy your progress. Therefore, clicking on the
+<strong>Clear Playbook</strong> button will open an info box for
+confirming the clear operation.</p>
+<p align="center">
+<img src="./images/41_review_clear_playbook_modal.jpg" style="width:400px;border: 3px solid #555" alt="The clear Playbook confirmation info box (review page)"><br/><b>Figure
+41: Clear Playbook Info Box</b>
+</p>
+</section>
+</section>
+</body>
+</html>

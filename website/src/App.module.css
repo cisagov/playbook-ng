@@ -1,0 +1,29 @@
+.header {
+  width: 100%;
+  height: auto;
+
+  z-index: var(--header-z-index);
+}
+
+.page_content {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.pre_footer {
+  flex-grow: 1;
+}
+
+.spinner_backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(112, 112, 112, 0.3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

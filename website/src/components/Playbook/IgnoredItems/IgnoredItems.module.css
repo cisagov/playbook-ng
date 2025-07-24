@@ -1,0 +1,27 @@
+.div :last-child {
+  margin-bottom: 0;
+}
+
+.button {
+  width: 100%;
+  text-align: left;
+}
+
+.para {
+  margin-bottom: 12px;
+}
+
+.list_wrap {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list_item:not(:last-child) {
+  margin-bottom: 4px !important;
+}

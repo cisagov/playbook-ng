@@ -1,0 +1,110 @@
+.header_row {
+  padding-bottom: 32px;
+}
+
+.header_buttons_title {
+  margin-bottom: 8px;
+}
+
+.header_buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header_button {
+  font-weight: 500;
+}
+
+.header_button:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.button_icon {
+  margin-right: 6px;
+}
+
+.featured_templates_row {
+  background-color: #f2f2f2;
+  box-shadow:
+    inset 0px 8px 4px -4px #cccccc,
+    inset 0px -8px 4px -4px #cccccc;
+
+  /* make width of page */
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
+
+  padding-top: 24px;
+  padding-bottom: 12px;
+
+  /* pad same as content div's margin */
+  padding-left: calc(50vw - 50% - 8px);
+  padding-right: calc(50vw - 50% - 8px);
+
+  margin-bottom: 24px;
+}
+
+/* for smaller screens */
+@media (max-width: 767px) {
+  /* no padding on container */
+  .featured_templates_row {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .featured_templates_col {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* prevent header touching edges */
+  .featured_header {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  /* padding inside scroller to prevent touching edges */
+  .featured_templates_container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+.featured_header {
+  text-align: left;
+}
+
+.featured_header_description {
+  font-size: 18px;
+}
+
+.featured_templates_container {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+.all_templates_header_title {
+  margin-bottom: 8px;
+}
+
+.no_templates_filler {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.preface {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--dhs-light-blue-60);
+  margin-bottom: 4px;
+}
+
+.search_wrap {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.body_fix {
+  overflow-x: hidden;
+}

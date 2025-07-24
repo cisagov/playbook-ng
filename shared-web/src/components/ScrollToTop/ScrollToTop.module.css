@@ -1,0 +1,7 @@
+.button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: var(--scroll-to-top-z-index);
+  border: 1px solid var(--dhs-white) !important;
+}

@@ -1,0 +1,14 @@
+services:
+  metrics:
+    image: 'playbook-ng-export-metrics-golang'
+    container_name: 'playbook-ng-export-metrics'
+    restart: always
+    environment:
+      METRICS_NETWORK: "tcp"
+      METRICS_ADDRESS: ":8000"
+      SYSLOG_NETWORK: "udp"
+      SYSLOG_ADDRESS: "127.0.0.1:514"
+      SYSLOG_TAG: "playbookngexport:"
+      CORS_ORIGIN: "*"
+      MAX_POST_SIZE: "42500"
+    network_mode: "host"

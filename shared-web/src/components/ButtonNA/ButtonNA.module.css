@@ -1,0 +1,9 @@
+.wrapper {
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
+}
+
+.disabled {
+  cursor: not-allowed;
+}

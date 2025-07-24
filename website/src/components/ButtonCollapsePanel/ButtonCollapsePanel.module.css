@@ -1,0 +1,25 @@
+.root {
+  margin-bottom: 16px;
+}
+
+.header_btn {
+  display: block;
+  font-weight: 500;
+}
+
+.header_btn.open {
+  border-bottom: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.collapse {
+  border: 1px solid #707070;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.body {
+  padding: 12px;
+}

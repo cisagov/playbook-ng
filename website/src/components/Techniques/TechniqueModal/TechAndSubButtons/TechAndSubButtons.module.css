@@ -1,0 +1,52 @@
+.button {
+  font-size: 18px;
+  font-weight: 500;
+
+  padding: 0;
+  margin: 0;
+}
+
+.button:disabled {
+  text-decoration: none;
+  color: #000;
+  opacity: 1;
+}
+
+.stack {
+  align-items: start;
+}
+
+.id {
+  /* fits ">Tnnnn" */
+  --w: 7ch;
+  width: var(--w);
+  min-width: var(--w);
+  max-width: var(--w);
+
+  margin-right: 12px;
+
+  text-align: right;
+  white-space: nowrap;
+}
+
+.name {
+  text-align: left;
+}
+
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list_item {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 575px) {
+  .list_item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,6 @@
+# Python Environment
+/venv/
+__pycache__/
+*.py[cod]
+*$py.class
+UNKNOWN.egg-info/

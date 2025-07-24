@@ -1,0 +1,10 @@
+.button {
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0px 4px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}

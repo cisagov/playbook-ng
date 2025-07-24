@@ -1,0 +1,223 @@
+.technique_modal_section {
+  padding: 16px 0px;
+}
+.technique_modal_section:first-child {
+  padding-top: 0px;
+}
+.technique_modal_section:last-child {
+  padding-bottom: 0px;
+}
+
+.technique_modal_section:not(:last-child) {
+  border-bottom: 2px solid #707070;
+}
+
+.section_header {
+  align-items: center;
+}
+
+.section_title_col {
+  text-align: left;
+
+  order: 2;
+}
+
+.technique_modal_add_button_col {
+  order: 1;
+
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (min-width: 992px) {
+  .section_title_col {
+    order: 1;
+  }
+
+  .technique_modal_add_button_col {
+    order: 2;
+  }
+}
+
+.section_title {
+  text-transform: capitalize;
+}
+
+.section_content {
+  margin-top: 16px;
+}
+
+.description_section {
+  text-align: left;
+
+  order: 2;
+}
+
+.description_section_metadata {
+  margin-bottom: 16px;
+
+  order: 1;
+}
+
+@media (min-width: 992px) {
+  .description_section {
+    order: 1;
+  }
+
+  .description_section_metadata {
+    margin-bottom: 0;
+
+    order: 2;
+  }
+}
+
+.description_title {
+  font-size: 24px;
+  font-weight: 500;
+
+  margin-bottom: 0;
+}
+
+.description_title_link {
+  padding-left: 0;
+}
+
+.tactic_list {
+  margin-bottom: 8px;
+}
+
+.tactic_list_item {
+  padding: 8px;
+
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+
+  border: none;
+  width: 100%;
+  background-color: #ffffff;
+}
+.tactic_list_item:disabled {
+  opacity: 1;
+  color: black;
+}
+
+@media (min-width: 992px) {
+  .tactic_list {
+    margin-bottom: 0;
+    padding-right: 8px;
+
+    border-right: 1px solid #707070;
+  }
+}
+
+.tactic_list_item:hover,
+.tactic_list_item:active {
+  background-color: #f2f2f2;
+  font-weight: 650;
+}
+
+.selected_list_item {
+  background-color: #f2f2f2;
+  font-weight: 650;
+}
+
+.tactic_content {
+  text-align: left;
+}
+
+.tactic_content_title_row {
+  margin-bottom: 16px;
+}
+
+.tactic_content_title {
+  font-size: 24px;
+  font-weight: 550;
+}
+
+.tactic_content_link_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+}
+
+.tactic_content_link {
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: underline;
+  text-align: start;
+}
+
+.technique_and_subtechniques_section {
+  text-align: left;
+}
+
+.example_row_header {
+  display: none;
+}
+
+.examples_section {
+  margin-top: -24px;
+}
+
+@media (min-width: 992px) {
+  .examples_section {
+    margin-top: -8px;
+  }
+
+  .example_row_header {
+    display: flex;
+
+    text-align: left;
+    font-size: 20px;
+    font-weight: 600;
+
+    border-bottom: 2px solid #707070;
+  }
+}
+
+.example_row {
+  text-align: left;
+  font-weight: 400;
+
+  padding: 16px 0px;
+}
+
+.example_row:last-child {
+  padding-bottom: 0px;
+}
+
+.example_row:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+.example_description_col {
+  display: flex;
+}
+
+@media (min-width: 992px) {
+  .example_description_col {
+    display: block;
+  }
+}
+
+.example_sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.example_source {
+  font-size: 18px;
+  font-weight: 500;
+
+  padding: 0;
+}
+
+@media (min-width: 992px) {
+  .example_source {
+    text-align: left;
+  }
+}

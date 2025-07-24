@@ -1,0 +1,8 @@
+.tooltip_icon {
+  font-weight: 600;
+  color: var(--dhs-light-blue-60);
+}
+
+.tooltip_icon:hover {
+  cursor: pointer;
+}

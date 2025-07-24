@@ -1,0 +1,8 @@
+.modal {
+  --bs-modal-header-padding: 4px 12px;
+}
+
+.header {
+  background-color: var(--dhs-light-blue-60);
+  color: var(--dhs-white);
+}

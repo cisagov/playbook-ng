@@ -1,0 +1,10 @@
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+.select_btn_wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}

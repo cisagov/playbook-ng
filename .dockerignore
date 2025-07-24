@@ -1,0 +1,4 @@
+**/node_modules
+**/dist
+**/docker
+!**/docker/sources

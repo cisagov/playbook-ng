@@ -1,0 +1,44 @@
+{
+  "name": "playbook-ng",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "",
+  "scripts": {
+    "prepare": "husky",
+    "format": "prettier --cache --write \"./*/src/**/*.{js,ts,jsx,tsx,css,scss,sass,html,md}\"",
+    "lint": "eslint --cache --report-unused-disable-directives --max-warnings 0 \"./*/src/**/*.{js,ts,jsx,tsx}\"",
+    "format_args": "prettier --cache --write",
+    "lint_args": "eslint --cache --report-unused-disable-directives --max-warnings 0"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "private": true,
+  "workspaces": [
+    "shared",
+    "shared-web",
+    "website",
+    "api",
+    "editor"
+  ],
+  "dependencies": {
+    "@types/node": "^22.5.4",
+    "@typescript-eslint/eslint-plugin": "^8.4.0",
+    "@typescript-eslint/parser": "^8.4.0",
+    "eslint": "^9.10.0",
+    "eslint-plugin-react": "^7.35.2",
+    "eslint-plugin-react-hooks": "^5.1.0-beta-26f2496093-20240514",
+    "eslint-plugin-react-refresh": "^0.4.11",
+    "husky": "^9.1.5",
+    "npm-check-updates": "^17.1.1",
+    "prettier": "3.3.3",
+    "sass": "1.77.6",
+    "typescript": "5.6.3",
+    "typescript-eslint": "^8.4.0",
+    "typescript-plugin-css-modules": "^5.1.0"
+  },
+  "overrides": {
+    "unzipper": "^0.12.3",
+    "stylus": "^0.64.0",
+    "archiver": "^7.0.1"
+  }
+}

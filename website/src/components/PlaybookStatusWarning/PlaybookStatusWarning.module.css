@@ -1,0 +1,16 @@
+.header {
+  background-color: var(--dhs-light-blue-60);
+  color: var(--dhs-white);
+  padding: 4px 12px;
+}
+
+.alert {
+  --bs-alert-bg: var(--uswds-yellow-5);
+  --bs-alert-color: var(--dhs-gray-90);
+  --bs-alert-link-color: var(--dhs-gray-90);
+  --bs-alert-border-color: var(--dhs-gray);
+}
+
+.start_list {
+  margin-bottom: 0;
+}

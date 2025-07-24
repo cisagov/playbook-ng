@@ -1,0 +1,6 @@
+.alert {
+  --bs-alert-bg: var(--uswds-yellow-5);
+  --bs-alert-color: var(--dhs-gray-90);
+  --bs-alert-link-color: var(--dhs-gray-90);
+  --bs-alert-border-color: var(--dhs-gray);
+}

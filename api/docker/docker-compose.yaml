@@ -1,0 +1,7 @@
+services:
+  api:
+    image: 'playbook-ng-api-node'
+    container_name: 'playbook-ng-api'
+    restart: always
+    ports:
+      - "8000:3000"

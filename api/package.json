@@ -1,0 +1,37 @@
+{
+  "name": "@playbook-ng/api",
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "./build.sh",
+    "preview": "./preview.sh"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+
+  "dependencies": {
+    "express": "^4.19.2",
+    "swagger-ui-express": "^5.0.1",
+    "@types/express": "^4.17.21",
+    "@types/swagger-ui-express": "^4.1.6",
+    "tsx": "^4.19.3",
+
+    "@playbook-ng/shared": "file:../shared",
+    "ajv": "^8.17.1",
+    "docx": "^9.0.3",
+    "exceljs": "^4.4.0",
+    "remark": "^15.0.1",
+    "remark-gfm": "^4.0.0",
+    "remark-parse": "^11.0.0",
+    "unified": "^11.0.5",
+    "dompurify": "^3.2.4",
+    "marked": "^15.0.2",
+    "uuid": "^11.0.3",
+    "cors": "^2.8.5",
+    "@types/cors": "^2.8.17"
+  }
+}

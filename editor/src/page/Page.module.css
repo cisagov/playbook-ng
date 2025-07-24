@@ -1,0 +1,39 @@
+.clear_modal_header {
+  background-color: #ebebeb !important;
+  padding: 4px 12px !important;
+}
+
+.root {
+  border-left: 2px solid var(--bs-border-color);
+  border-right: 2px solid var(--bs-border-color);
+  padding: 32px 12px;
+  margin: 32px 0px;
+}
+
+.title {
+  overflow-wrap: anywhere;
+}
+
+.paste_in_box {
+  resize: none;
+  width: 100%;
+  --height: 4em;
+  min-height: var(--height);
+  height: var(--height);
+  max-height: var(--height);
+  border: 1px solid black !important;
+  border-right: none !important;
+  overflow: hidden;
+}
+
+.copy_out_box {
+  resize: none;
+  width: 100%;
+  --height: 4em;
+  min-height: var(--height);
+  height: var(--height);
+  max-height: var(--height);
+  border: 1px solid black !important;
+  border-radius: 4px;
+  overflow: hidden;
+}

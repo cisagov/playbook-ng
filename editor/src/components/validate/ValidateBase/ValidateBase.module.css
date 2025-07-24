@@ -1,0 +1,34 @@
+.status {
+  padding: 0px 8px;
+  border: 1px solid;
+  border-radius: 4px;
+  width: fit-content;
+  margin-bottom: 4px;
+}
+
+.good {
+  --fg: rgb(0, 105, 4);
+  --bg: #daffcb;
+
+  color: var(--fg);
+  border-color: var(--fg);
+  background-color: var(--bg);
+}
+
+.warn {
+  --fg: rgb(105, 100, 0);
+  --bg: #f9fdbe;
+
+  color: var(--fg);
+  border-color: var(--fg);
+  background-color: var(--bg);
+}
+
+.bad {
+  --fg: rgb(105, 0, 0);
+  --bg: #ffcccc;
+
+  color: var(--fg);
+  border-color: var(--fg);
+  background-color: var(--bg);
+}

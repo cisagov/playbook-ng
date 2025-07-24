@@ -1,0 +1,21 @@
+This is remark-docx 0.1.6 by inokawa.
+
+GitHub: https://github.com/inokawa/remark-docx
+npm   : https://www.npmjs.com/package/remark-docx
+
+MIT License
+Copyright (c) 2022 inokawa
+
+This was pulled-in as a local copy to allow easy changes.
+
+- Config files have been deleted
+- Tweaks were made to appease ESLint / TSC
+- To-Do and Fix-Me markers were removed to prevent viewing them in ToDo Tree
+- Math / Latex parsing removed
+- Tweaks are being made to adjust
+  - Inline / Block Code styling
+  - Hyperlink styling
+  - Table width (currently too small in LibreOffice Writer)
+  - etc
+
+In the future - these changes may be pushed to a fork / as issues / as PRs.

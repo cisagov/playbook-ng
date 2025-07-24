@@ -1,0 +1,135 @@
+$dhs-light-blue: #0078ae;
+$dhs-light-blue-60: #005b84;
+$dhs-light-blue-80: #002231;
+$dhs-red: #c41230;
+$uswds-orange-50v: #c05600;
+
+:root {
+  --header-z-index: 100;
+  --toast-z-index: 2000;
+  --scroll-to-top-z-index: 1000;
+  --playbook-nav-z-index: 10;
+
+  --dhs-white: #ffffff;
+  --dhs-gray-90: #080808;
+  --dhs-black: #000000;
+  --dhs-blue: #005288;
+  --dhs-gray: #c0c2c4;
+  --dhs-gray-20: #edeeee;
+  --dhs-light-blue: #{$dhs-light-blue};
+  --dhs-light-blue-rgb: 0, 120, 174;
+  --dhs-light-blue-10: #f5fafc;
+  --dhs-light-blue-15: #d6e9f2;
+  --dhs-light-blue-60: #{$dhs-light-blue-60};
+  --dhs-light-blue-80: #{$dhs-light-blue-80};
+  --dhs-red: #{$dhs-red};
+  --dhs-green-60: #477326;
+  --dhs-green: #5e9732;
+  --dhs-green-rgb: 94, 151, 50;
+  --dhs-green-10: #f9fbf7;
+  --uswds-yellow-5: #faf3d1;
+  --uswds-orange-30v: #fa9441;
+  --uswds-orange-50v: #{$uswds-orange-50v};
+}
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    "primary": $dhs-light-blue,
+    "danger": $dhs-red,
+    "warning": $uswds-orange-50v,
+  )
+);
+
+$link-color: $dhs-light-blue;
+$link-hover-color: $dhs-light-blue-80;
+
+@import "../../node_modules/bootstrap/scss/bootstrap-reboot";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// non-bs buttons (used for Tactic picker)
+button {
+  color: var(--dhs-black);
+  padding: 1px 6px;
+  border-radius: 0;
+}
+button:not(.btn):disabled {
+  color: var(--dhs-gray-90) !important;
+  background-color: var(--dhs-gray) !important;
+  border-color: var(--dhs-gray) !important;
+  opacity: 1 !important;
+}
+
+.unstyled_list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+// bs buttons (avoid link styled ones, used for Tech + Sub picker)
+.btn:not(.btn-link):disabled {
+  --bs-btn-disabled-color: var(--dhs-gray-90) !important;
+  --bs-btn-disabled-bg: var(--dhs-gray) !important;
+  --bs-btn-disabled-border-color: var(--dhs-gray) !important;
+  --bs-btn-disabled-opacity: 1 !important;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: var(--dhs-gray-90);
+}
+
+@font-face {
+  font-family: SourceSans3;
+  src: url("../data/font/SourceSans3/SourceSans3-VariableFont_wght.ttf");
+  font-weight: 200 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: SourceSans3;
+  src: url("../data/font/SourceSans3/SourceSans3-Italic-VariableFont_wght.ttf");
+  font-weight: 200 900;
+  font-style: italic;
+}
+body {
+  font-family: SourceSans3 !important;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.bs-svg {
+  vertical-align: -0.125em;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+h4 {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+blockquote {
+  border-left: 4px solid var(--dhs-light-blue);
+  background-color: var(--dhs-gray-20);
+  border-radius: 6px;
+  padding: 6px;
+}

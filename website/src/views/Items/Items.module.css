@@ -1,0 +1,11 @@
+.preface {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--dhs-green-60);
+  margin-bottom: 4px;
+}
+
+.search_wrap {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}

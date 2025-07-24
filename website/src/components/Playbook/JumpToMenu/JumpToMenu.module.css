@@ -1,0 +1,136 @@
+.title {
+  font-size: 22px;
+}
+
+.mobile_open_button {
+  /* stick to top */
+  position: sticky;
+  top: -1px;
+  z-index: var(--playbook-nav-z-index);
+
+  /* based on page_content container */
+  margin-top: -24px;
+  margin-bottom: 16px;
+
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: #eee;
+}
+.mobile_open_button:hover,
+.mobile_open_button:focus {
+  background-color: #ccc;
+}
+.mobile_open_button:active {
+  background-color: #aaa;
+}
+
+.desktop_col {
+  padding-left: 0;
+}
+
+.desktop_sticky {
+  /* stick to top */
+  position: sticky;
+  top: 8px;
+  z-index: var(--playbook-nav-z-index);
+}
+
+.desktop_listwrap {
+  max-height: 70dvh;
+  overflow-y: auto;
+}
+
+.list_of_parents {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.list_of_parents > li:not(:first-child) {
+  border-top: 1px solid black;
+}
+
+.list_of_children {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+}
+.list_of_children > li {
+  border-top: 1px solid black;
+}
+
+.entry_btn {
+  border: none;
+  text-align: left;
+  word-break: break-word;
+  padding: 4px 8px;
+}
+
+.parent_btn {
+  flex-grow: 1;
+}
+
+.expand_btn {
+  --w: 32px;
+  min-width: var(--w);
+  width: var(--w);
+  max-width: var(--w);
+  border: none;
+  border-left: 1px dotted black;
+}
+
+.entry_btn,
+.expand_btn {
+  background-color: #eee;
+}
+.entry_btn:hover,
+.entry_btn:focus,
+.expand_btn:hover,
+.expand_btn:focus {
+  background-color: #ccc;
+}
+.entry_btn:active,
+.expand_btn:active {
+  background-color: #aaa;
+}
+
+.parent_and_expand {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.spacer_div {
+  --w: 16px;
+  min-width: var(--w);
+  width: var(--w);
+  max-width: var(--w);
+  border-top: 1px solid black;
+}
+
+.child_btn {
+  width: 100%;
+}
+
+.spacer_and_child_list {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.entry_icon {
+  font-size: 12px !important;
+  margin-right: 2px;
+}
+.tech_icon {
+  color: var(--dhs-light-blue-60);
+  font-weight: 600 !important;
+}
+.item_icon {
+  color: var(--dhs-green-60);
+  font-weight: 600 !important;
+}

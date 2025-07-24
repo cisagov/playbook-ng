@@ -1,0 +1,85 @@
+.search_container {
+  margin-bottom: 16px;
+}
+
+.filters_container {
+  margin-bottom: 16px;
+}
+
+@media (min-width: 992px) {
+  .filters_container {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+    align-items: start;
+  }
+}
+
+.filters_toggle_button {
+  background-color: #0000;
+  border: none;
+}
+
+.clear_all_filters_button {
+  padding-top: 0;
+  padding-bottom: 0;
+  border: none;
+}
+
+@media (min-width: 992px) {
+  .filters_container {
+    align-items: start;
+  }
+
+  .filters_toggle_button {
+    align-self: flex-start;
+  }
+}
+
+.filter_button_container {
+  margin-top: 8px;
+}
+
+@media (max-width: 991px) {
+  .filter_button_container {
+    background-color: #ebebeb;
+    box-shadow:
+      inset 0px 8px 4px -4px #cccccc,
+      inset 0px -8px 4px -4px #cccccc;
+
+    padding: 4px;
+  }
+}
+
+@media (min-width: 992px) {
+  .filter_button_container {
+    align-items: start;
+  }
+}
+
+.filters {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+
+  overflow-x: auto;
+}
+
+@media (min-width: 992px) {
+  .filters {
+    flex-direction: row;
+    overflow-x: inherit;
+    flex-wrap: wrap;
+
+    align-items: center;
+  }
+}
+
+.group_by_tactic_check_item {
+  margin-left: 16px;
+}
+
+.group_by_tactic_check_label {
+  font-weight: 500;
+}

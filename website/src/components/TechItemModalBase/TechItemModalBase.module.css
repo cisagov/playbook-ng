@@ -1,0 +1,63 @@
+.header {
+  border-radius: 8px 8px 0 0;
+  padding: 6px 12px;
+}
+
+.tech_header {
+  background-color: var(--dhs-light-blue-60);
+  color: var(--dhs-white);
+}
+
+.item_header {
+  background-color: var(--dhs-green-60);
+  color: var(--dhs-white);
+}
+
+.header_title_col {
+  line-height: 1.2;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 2px;
+}
+
+.header_pre_title {
+  display: inline-block;
+  font-size: 18px;
+}
+
+.header_title {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 550;
+}
+
+.header_link_col {
+  padding-left: 0;
+  padding-right: 6px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.header_link {
+  color: var(--dhs-white);
+  font-size: 20px;
+  font-weight: 500;
+  text-align: end;
+}
+
+.header_link:hover,
+.header_link:focus {
+  color: var(--dhs-white);
+  font-weight: 900;
+}
+
+.header_close_button {
+  margin-right: 0;
+}
+
+.body {
+  overflow-y: auto;
+}

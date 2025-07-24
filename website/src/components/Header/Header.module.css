@@ -1,0 +1,18 @@
+.wrapper {
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.content {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.content > *:last-child {
+  margin-bottom: 0;
+}

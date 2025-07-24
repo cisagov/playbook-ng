@@ -1,0 +1,23 @@
+{
+  "name": "@playbook-ng/shared",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "",
+  "scripts": {},
+  "author": "",
+  "license": "UNLICENSED",
+
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "docx": "^9.0.3",
+    "exceljs": "^4.4.0",
+    "remark": "^15.0.1",
+    "remark-gfm": "^4.0.0",
+    "remark-parse": "^11.0.0",
+    "unified": "^11.0.5",
+    "dompurify": "^3.2.4",
+    "marked": "^15.0.2",
+    "uuid": "^11.0.3"
+  }
+}

@@ -1,0 +1,14 @@
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 16px;
+  border: 1px solid #707070;
+}
+
+.label {
+  font-weight: 650;
+}
+
+.confidence_select {
+  text-transform: capitalize;
+}

@@ -1,0 +1,16 @@
+.footer {
+  background-color: var(--dhs-blue);
+  color: var(--dhs-white);
+  padding: 1rem;
+}
+
+.link {
+  color: var(--dhs-white);
+}
+
+.link:hover,
+.link:focus,
+.link:active {
+  color: var(--dhs-white);
+  font-weight: 900;
+}

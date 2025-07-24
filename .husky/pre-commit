@@ -1,0 +1,3 @@
+curdir=$(dirname "$(realpath $0)")
+target="${curdir}/pre-commit-bash.sh"
+bash $target

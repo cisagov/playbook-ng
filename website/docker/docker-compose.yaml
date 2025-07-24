@@ -1,0 +1,7 @@
+services:
+  website:
+    image: 'playbook-ng-website-nginx'
+    container_name: 'playbook-ng-website'
+    restart: always
+    ports:
+      - "8000:80"

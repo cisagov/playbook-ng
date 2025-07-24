@@ -1,0 +1,9 @@
+.root_editing {
+  border-left: 2px solid gray;
+  padding: 4px;
+  background-color: #00000010;
+}
+
+.null_editing {
+  border-bottom: 2px dotted gray;
+}

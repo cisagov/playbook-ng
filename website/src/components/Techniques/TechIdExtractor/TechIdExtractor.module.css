@@ -1,0 +1,78 @@
+.h2_inline {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.root h3 {
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+.root h4 {
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 100px;
+  border-radius: 4px;
+  border: 1px solid var(--dhs-light-blue);
+  background-color: var(--dhs-light-blue-10) !important;
+}
+
+.clear_text_button {
+  margin-top: 4px;
+}
+
+.addable_tech {
+  align-items: start;
+  padding-top: 4px;
+}
+
+.addable_tech_list_item {
+  border-top: 1px solid #bbb;
+}
+.addable_tech_list_item:last-child {
+  border-bottom: 1px solid #bbb;
+}
+
+.addable_tech_check {
+  width: 100%;
+  border-right: 1px dotted #bbb;
+}
+
+.addable_tech_check_label {
+  width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.addable_tech_button {
+  padding: 0 4px;
+  margin-left: 4px;
+}
+
+.addable_tech_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 6px;
+}
+
+.addable_buttons {
+  margin-top: 12px;
+}
+
+.results_pane {
+  max-height: 50dvh;
+  overflow-y: auto;
+  padding: 8px 4px;
+}
+
+@media (max-width: 767px) {
+  .results_pane {
+    margin-top: 12px;
+  }
+}

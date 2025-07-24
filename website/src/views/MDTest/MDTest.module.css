@@ -1,0 +1,21 @@
+.root h2 {
+  margin-bottom: 16px;
+}
+
+.root h3 {
+  margin-bottom: 12px;
+}
+
+.block {
+  border: 2px solid black;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+
+  max-width: 80ch;
+  overflow-wrap: anywhere;
+}
+
+.link {
+  font-size: 16px;
+}

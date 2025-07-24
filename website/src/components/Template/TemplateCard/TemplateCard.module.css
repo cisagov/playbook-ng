@@ -1,0 +1,92 @@
+:root {
+  --color-border: #707070;
+}
+
+.card {
+  width: 100%;
+  max-width: 450px;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 24px 48px;
+  flex-shrink: 0;
+  height: fit-content;
+  background-color: #ffffff;
+}
+
+.card:not(:last-child) {
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+
+.header {
+  border-bottom: 2px solid var(--color-border);
+  margin-bottom: 10px;
+  align-items: start;
+  display: flex;
+  flex-direction: row;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 16px;
+  margin-top: 4px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 900;
+  text-align: left;
+  word-break: break-word;
+}
+
+.link {
+  font-size: 18px;
+  text-align: left;
+  word-break: break-word;
+}
+
+.tech_miti_counts {
+  font-size: 12px;
+  font-weight: 600;
+  text-align: left;
+  margin-top: 4px;
+  margin-bottom: 2px;
+}
+
+.counts_divider {
+  color: var(--color-border);
+  font-weight: 400;
+}
+
+.description {
+  font-size: 16px;
+  text-align: left;
+}
+
+.button_wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.info_button {
+  padding: 0;
+}
+
+/* xs breakpoint */
+@media (max-width: 575px) {
+  .card {
+    padding: 12px 24px;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .icon {
+    margin-top: 0px;
+  }
+}
